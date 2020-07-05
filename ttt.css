@@ -1,0 +1,54 @@
+body {
+	background-color: powderblue;
+	font-family: verdna, sans-serif;
+	color: white;
+}
+.player2 {
+	margin-top: -500px;
+}
+.container {
+	width: 750px;
+	height: 660px;
+	background-color: black;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.header {
+	margin-top: -508px;
+}
+
+.control {
+	margin-top: 40px;
+}
+
+.checkbox {
+	margin-left: 40px;
+}
+
+.board-container {
+	margin-top: 40px;
+}
+.row {
+	font-size: 0px;
+}
+.row > div {
+	display: inline-block;
+	font-size: 90px;
+	/* border: solid 1px white; */
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	vertical-align: top;
+	line-height: 100px;
+}
+.right {
+  border-right: solid 5px white;
+}
+
+.bottom {
+  border-bottom: solid 5px white;
+}
+.reset {
+	margin-top: 50px;
+}
