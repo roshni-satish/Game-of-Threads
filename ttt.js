@@ -21,7 +21,7 @@ $(document).ready(function() {
 	$(".square").click(function() {
 		sqId = $(this).attr("id");
 		PlayerMove();
-		//ComputerMove();
+		ComputerMove();
 		if(checkWinner()){
 			alert(turn+" Won the Game!!!");
 		}
@@ -41,10 +41,10 @@ $(document).ready(function() {
 //player move
 function PlayerMove() {
 	if($("#"+sqId).text() == ""){
-		$("#"+sqId).text(turn);
+		$("#"+sqId).text(user);
 		row = getRow();
 		col = getCol();
-		board[row][col] = turn;
+		board[row][col] = user;
 		console.log(board);
 	}
 	else {
