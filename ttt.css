@@ -1,21 +1,49 @@
 body {
+	height: 100%
 	background-color: powderblue;
 	font-family: verdna, sans-serif;
 	color: white;
 }
 .player2 {
-	margin-top: -500px;
+	position: fixed;
+	top: 0;
+	left: 1050;
 }
+.field {
+	position: fixed;
+	left: 1050;
+}
+
 .container {
+	position: fixed;
+	top: 0;
+	left: 300px;
 	width: 750px;
-	height: 660px;
+	height: 100%;
 	background-color: black;
 	margin: 0 auto;
 	text-align: center;
+	align-content: center;
+}
+.init_red {
+  	font-size: 90px;
+  	color: #fff;
+  	text-align: center;
+  	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e6000b, 0 0 20px #e6000b, 0 0 25px #e6000b, 0 0 30px #e6000b, 0 0 35px #e6000b;
 }
 
-.header {
-	margin-top: -508px;
+.init_green {
+  	font-size: 90px;
+  	color: #fff;
+  	text-align: center;
+  	text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #08e600, 0 0 10px #08e600, 0 0 5px #08e600, 0 0 30px #08e600, 0 0 5px #08e600;
+}
+
+.init_blue {
+  	font-size: 90px;
+  	color: #fff;
+  	text-align: center;
+  	text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #00dbe6, 0 0 10px #00dbe6, 0 0 5px #00dbe6, 0 0 30px #00dbe6, 0 0 5px #00dbe6;
 }
 
 .control {
@@ -49,6 +77,15 @@ body {
 .bottom {
   border-bottom: solid 5px white;
 }
-.reset {
+.newgame {
 	margin-top: 50px;
+	background-color: #52d29d;
+    	border: none;
+    	padding: 13px 26px;
+   	border-radius: 12px;
+    	color: #ffffff;
+    	font-family: 'Gloria Hallelujah', cursive;
+    	cursor: pointer;
+    	font-size: 24;
+    	font-weight: 600;
 }
