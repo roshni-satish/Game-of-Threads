@@ -4,6 +4,8 @@ body {
 	font-family: verdna, sans-serif;
 	color: white;
 }
+.player1 {
+	position: fixed;
 .player2 {
 	position: fixed;
 	top: 0;
