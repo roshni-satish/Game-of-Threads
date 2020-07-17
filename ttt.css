@@ -23,6 +23,7 @@ body {
 	left: 300px;
 	width: 750px;
 	height: 100%;
+	background-image: url("mars.jpg");
 	background-color: black;
 	margin: 0 auto;
 	text-align: center;
