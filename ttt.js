@@ -25,7 +25,7 @@ $(document).ready(function() {
 		if(checkWinner()){
 			alert(turn+" Won the Game!!!");
 		}
-		if(!checkDraw()){
+		else if(!checkDraw()){
 			alert("It's a Draw!");
 		}
 		turn = (turn == user) ? computer : user;
