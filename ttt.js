@@ -4,7 +4,7 @@ var board = [
 	["","",""]
 ]
 
-var turn, sqId, user, computer, row, col;
+var turn, sqId, user, computer, row, col, cw;
 const ARR_LENGTH = 3;
 
 $(document).ready(function() {
@@ -21,11 +21,13 @@ $(document).ready(function() {
 	$(".square").click(function() {
 		sqId = $(this).attr("id");
 		PlayerMove();
-		ComputerMove();
-		if(checkWinner()){
-			alert(turn+" Won the Game!!!");
+		if(checkDraw()!=0){
+                 ComputerMove()}
+                 cw=checkWinner();
+		if(cw()!=0){
+			alert(cw+" Won the Game!!!");
 		}
-		else if(!checkDraw()){
+		else if(checkDraw()==0){
 			alert("It's a Draw!");
 		}
 		turn = (turn == user) ? computer : user;
@@ -42,8 +44,8 @@ $(document).ready(function() {
 function PlayerMove() {
 	if($("#"+sqId).text() == ""){
 		$("#"+sqId).text(user);
-		row = getRow();
-		col = getCol();
+		row = getRow(sqId);
+		col = getCol(sqId);
 		board[row][col] = user;
 		console.log(board);
 	}
@@ -60,8 +62,8 @@ function ComputerMove() {
 		random = Math.floor(Math.random() * (max+min));
 	}while($("#"+random).text() != "")
 	$("#"+random).text(computer);
-	row = getRow();
-	col = getCol();
+	row = getRow(random);
+	col = getCol(random);
 	board[row][col] = computer;
 }
 
@@ -70,20 +72,22 @@ function checkDraw() {
 	for(var i=0; i<ARR_LENGTH; i++) {
 		for(var j=0; j<board[i].length; j++) {
 			if(board[i][j] == "")
-				return true;
+				{os=os+1;
+				 	return os;
+					}
 		}
 	}
-	return false; 
+	return os; 
 }
 
 //getting row number
-function getRow() {
-	return Math.floor(sqId / ARR_LENGTH) ;
+function getRow(sqid1) {
+	return Math.floor(sqid1 / ARR_LENGTH) ;
 }
 
 //getting col number
-function getCol() {
-	return sqId % ARR_LENGTH;
+function getCol(sqid1) {
+	return sqid1 % ARR_LENGTH;
 }
 
 //check who won
@@ -91,21 +95,21 @@ function checkWinner() {
 	//checking rows
 	for(var i = 0; i < ARR_LENGTH; i++){
 		if(board[i][0] != "" && board[i][0] == board[i][1] && board[i][1] == board[i][2])
-			return true;
+			return board[i][0];
 	}
 	//checking columns
 	for(var i = 0; i < ARR_LENGTH; i++){
 		if(board[0][i] != "" && board[0][i] == board[1][i] && board[1][i] == board[2][i])
-			return true;
+			return board[0][i];
 	}
 	//checking diagonals
 	if(board[0][0] != "" && board[0][0] == board[1][1] && board[1][1] == board[2][2])
-		return true;
+		return board[0][0];
 	if(board[0][2] != "" && board[0][2] == board[1][1] && board[1][1] == board[2][0])
-		return true;
+		return board[0][2];
 
 	// if reached this point then return false
-	return false;
+	return 0;
 
 }
 
