@@ -1,0 +1,64 @@
+
+  <head>
+	  <link rel="stylesheet" href="ttt.css">
+    <style>
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="ttt4.js">
+	  </script>
+    <script src="minimax.js">
+      </script>
+	  <title> Tic Tac Toe </title>
+  </head>
+
+  <div class="player1">
+ 	 <img src="download.jpg" alt="player1" height="500" width="290">
+  </div>
+  <div class="player2">
+ 	 <img src="download2.png" align="right" alt="player2" height="500" width="290">
+  </div>
+  <div class="container">
+	  <!--header section -->
+	  <div class="header">
+		  <br>
+		  <h1>Tic Tac Toe</h1>
+	  </div>
+	  <!-- controls section: checkboxes -->
+	  <div class="controls">
+		  <h3>You're playing against the computer. Chose X or O</h3>
+		  <form action="#">
+			  <input class="checkbox" type="checkbox" name="X Player" value="X">X Player
+			  <input class="checkbox" type="checkbox" name="O Player" value="O">O Player
+
+
+		  </form>
+ 	 </div>
+	  <!-- board-container -->
+	  <div class="board-container">
+		<!-- first row -->
+		<div class="row">
+			<div id="0" class="square bottom right"></div>
+			<div id="1" class="square bottom right"></div>
+			<div id="2" class="square bottom"></div>
+		</div>
+
+		<!-- second row -->
+		<div class="row">
+			<div id="3" class="square bottom right"></div>
+			<div id="4" class="square bottom right"></div>
+			<div id="5" class="square bottom"></div>
+		</div>
+
+		<!-- third row -->
+		<div class="row">
+			<div id="6" class="square right"></div>
+			<div id="7" class="square right"></div>
+			<div id="8" class="square"></div>
+		</div>
+		<div class="reset">
+			<a class="reset" href="#" onclick="">reset board</a>
+		</div>
+	</div>
+</div>
