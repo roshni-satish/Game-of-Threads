@@ -1,7 +1,8 @@
 var board = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
-var turn, sqId, user, computer, row, col;
+var turn, sqId, user, computer, row, col, wrong_move;
 const ARR_LENGTH = 15;
+wrong_move=0;
 
 $(document).ready(function() {
 	user = "player1";
@@ -12,34 +13,54 @@ $(document).ready(function() {
 		sqId = $(this).attr("id");
 		PlayerMove();
 		if(checkWinner(board)){
-			alert(turn+" Won the Game!!!");
+			//alert(turn+" Won the Game!!!");
+			Win(turn);
 		}
 		else if(checkDraw(board)){
-			alert("It's a Draw!");
+			//alert("It's a Draw!");
+			Draw();
 		}
-		if(turn == 'X'){
-			zoomout();
-			turn = 'O';
-			user = "player2";
-			zoomin();
-		}
-		else if(turn == 'O'){
-			zoomout();
-			turn = 'Y';
-			user = "player3";
-			zoomin();
-		}
-		else{
-			zoomout();
-			turn= 'X';
-			user = "player1";
-			zoomin();
+		else if(wrong_move==0){
+			if(turn == 'X'){
+				zoomout();
+				turn = 'O';
+				user = "player2";
+				zoomin();
+			}
+			else if(turn == 'O'){
+				zoomout();
+				turn = 'Y';
+				user = "player3";
+				zoomin();
+			}
+			else{
+				zoomout();
+				turn= 'X';
+				user = "player1";
+				zoomin();
+			}
 		}
 	});
 
 	//reset board
 	$(".reset").click(function() {
 		resetboard();
+	})
+	
+	$(".option1").click(function() {
+		unWin();
+	})
+
+	$(".option2").click(function() {
+		unWin();
+	})
+
+	$(".option3").click(function() {
+		unDraw();
+	})
+
+	$(".close-button").click(function() {
+		CloseRules();
 	})
 
 });
@@ -50,9 +71,11 @@ function PlayerMove() {
 		$("#"+sqId).text(turn);
 		board[sqId] = turn;
 		console.log(board);
+		wrong_move=0;
 	}
 	else {
 		alert("Wrong move");
+		wrong_move=1;
 	}
 }
 
@@ -131,5 +154,35 @@ function zoomout(){
 	myImg.style.height = (currHeight - 30)+"px";
 	}
 }
+
+function CloseRules() {
+	rules.classList.remove('active')
+	overlay.classList.remove('active')
+}
+
+
+function Win(turn) {
+	document.getElementById("win_popup_text").innerHTML = turn+" Won the game!";
+	win_popup.classList.add('active')
+	overlay.classList.add('win')
+}
+
+function unWin() {
+	win_popup.classList.remove('active')
+	overlay.classList.remove('win')
+	resetboard();
+}
+
+function Draw() {
+	draw_popup.classList.add('active')
+	overlay.classList.add('active')
+}
+
+function unDraw() {
+	draw_popup.classList.remove('active')
+	overlay.classList.remove('active')
+	resetboard();
+}
+
 
 
