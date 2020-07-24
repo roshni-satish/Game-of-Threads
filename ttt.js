@@ -1,6 +1,4 @@
 var board = [0,1,2,3,4,5,6,7,8]
-var trialboard = [0,1,2,3,4,5,6,7,8]
-var bestscore = [0,1,2,3,4,5,6,7,8]
 var turn, sqId, user, computer, row, col, level, wrong_move, score;
 level=0;
 wrong_move=0;
