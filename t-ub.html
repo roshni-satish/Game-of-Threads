@@ -1,0 +1,38 @@
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Arimo|Montserrat' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href="t-ub.css">
+	<link rel="stylesheet" href="ttt.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="t-ub.js"></script>
+
+<body>
+	<div class="container">
+		<h1>Tic-Tac-Toe</h1>
+		<div id='selection'>
+			Play as:
+			<button style="color:white;" class='hover'>X</button>
+			<button style="color:white;" class='hover'>O</button>
+		</div>
+		<div id='result'>
+		</div>
+		<table>
+			<tr id='row0' class='row'>
+				<td id='00' class='spot right bottom'> </td>
+				<td id='01' class='spot right bottom'> </td>
+				<td id='02' class='spot bottom'> </td>
+			</tr>
+			<tr id='row1' class='row'>
+				<td id='10' class='spot right bottom'> </td>
+				<td id='11' class='spot right bottom'> </td>
+				<td id='12' class='spot bottom'> </td>
+			</tr>
+			<tr id='row2' class='row'>
+				<td id='20' class='spot right'> </td>
+				<td id='21' class='spot right'> </td>
+				<td id='22' class='spot'> </td>
+			</tr>
+		</table>
+	</div>
+</body>
