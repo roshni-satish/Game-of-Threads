@@ -62,6 +62,8 @@ $(document).ready(function() {
 	$(".2players").click(function() {
 		Closeshift();
 		level=0;
+		player2.classList.remove('active')
+		player2human.classList.add('active')
 	})
 
 	$(".easy").click(function() {
