@@ -35,31 +35,31 @@ Horizontal win:
 
 O O O
 
-X X
+X X O
 
-X
+X O X
 
 The player who controls the O symbol won by drawing the three symbols in a
 horizontal line.
 
 Vertical win:
 
-O
+O O X
 
 O X X
 
-O X
+O X O
 
 The player who controls the O symbol won by drawing the three symbols in a
 vertical line.
 
 Diagonal win:
 
-O X
+O O X
 
-O X
+O X O
 
-X O
+X O O
 
 The player who controls the O symbol won by drawing the three
 symbols in a diagonal line.
