@@ -6,11 +6,13 @@ The project is about building a new version of the Tic Tac Toe game. This design
 game gives the player options for a two or multiplayer game as well as the choice to the
 single player to play against the AI BOT. The game design, algorithms and strategies
 used are documented below.
+
 Tic-tac-toe standard Game Design
-This game is very popular and is fairly simple by itself. Anyone can play Tic-tac-toe
+This game is very popular and is fairly simple by itself, It's a classic among 90's and early 2000's kids. Anyone can play Tic-tac-toe
 almost everywhere with only pen and paper, making this a very casual game.
 Players: Two Players
 Time estimation: one or two minutes
+
 ● Game Methodology & Set-Up:
 
 1.A 3x3 grid is used to play the simplest version which has nine possible spaces as
