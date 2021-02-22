@@ -12,6 +12,7 @@ almost everywhere with only pen and paper, making this a very casual game.
 Players: Two Players
 Time estimation: one or two minutes
 ● Game Methodology & Set-Up:
+
 1.A 3x3 grid is used to play the simplest version which has nine possible spaces as
 below.
 2. The first player chooses to draw or place a symbol (say ‘O’) in one selected
